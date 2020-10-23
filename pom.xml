@@ -12,6 +12,7 @@
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <suiteXmlFile>testng.xml</suiteXmlFile>
         <slf4j-api.version>1.7.30</slf4j-api.version>
+        <sel.version>4.0.0-alpha-5</sel.version>
     </properties>
 
     <dependencies>
@@ -20,7 +21,7 @@
         <dependency>
             <groupId>org.seleniumhq.selenium</groupId>
             <artifactId>selenium-java</artifactId>
-            <version>4.0.0-alpha-5</version>
+            <version>${sel.version}</version>
         </dependency>
 
         <!-- https://mvnrepository.com/artifact/io.github.bonigarcia/webdrivermanager -->
