@@ -3,12 +3,7 @@
 <suite name="MySuite" parallel="none">
     <test name="MyTest1">
         <classes>
-            <class name="testNGSample.TC1"/>
-        </classes>
-    </test>
-    <test name="MyTest2">
-        <classes>
-            <class name="testNGSample.TC2"/>
+            <class name="sel4.Emulate_Geo_TimeZone"/>
         </classes>
     </test>
 </suite>
