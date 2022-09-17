@@ -5,15 +5,19 @@ import io.github.bonigarcia.wdm.WebDriverManager;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.devtools.DevTools;
-import org.openqa.selenium.devtools.network.Network;
-import org.openqa.selenium.devtools.network.model.BlockedReason;
-import org.openqa.selenium.devtools.network.model.ResourceType;
+//import org.openqa.selenium.devtools.network.Network;
+//import org.openqa.selenium.devtools.network.model.BlockedReason;
+//import org.openqa.selenium.devtools.network.model.ResourceType;
+import org.openqa.selenium.devtools.v102.network.Network;
+import org.openqa.selenium.devtools.v102.network.model.BlockedReason;
+import org.openqa.selenium.devtools.v102.network.model.ResourceType;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.annotations.Test;
 
 import java.util.Optional;
 
-import static org.openqa.selenium.devtools.network.Network.loadingFailed;
+//import static org.openqa.selenium.devtools.network.Network.loadingFailed;
+import static org.openqa.selenium.devtools.v102.network.Network.loadingFailed;
 import static org.testng.Assert.assertEquals;
 
 public class inetIntercept {

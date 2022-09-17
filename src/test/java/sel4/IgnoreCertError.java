@@ -4,7 +4,8 @@ import io.github.bonigarcia.wdm.WebDriverManager;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.devtools.DevTools;
-import org.openqa.selenium.devtools.security.Security;
+//import org.openqa.selenium.devtools.security.Security;
+import org.openqa.selenium.devtools.v102.security.Security;
 import org.testng.annotations.Test;
 
 public class IgnoreCertError {

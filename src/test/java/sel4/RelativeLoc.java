@@ -6,10 +6,11 @@ import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.support.locators.RelativeLocator;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
-import static org.openqa.selenium.support.locators.RelativeLocator.withTagName;
+import static org.openqa.selenium.support.locators.RelativeLocator.RelativeBy;
 
 import java.time.Duration;
 import java.util.List;
@@ -49,7 +50,8 @@ public class RelativeLoc {
         WebElement TFS = driver.findElement(withTagName("td").below(bugZ).toRightOf(selLink));
         highlight(driver, TFS); */
 
-             List<WebElement> els = driver.findElements(withTagName("td").below(bugZ));
+             //List<WebElement> els = driver.findElements(RelativeLocator.with("td").below(bugZ));
+        List<WebElement> els = driver.findElements(RelativeLocator.with(By.tagName("td")).below(bugZ));
             for(WebElement el : els){
                 System.out.println(el.getTagName() + " " +el.getText());
             }
