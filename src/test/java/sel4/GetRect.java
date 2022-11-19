@@ -1,6 +1,5 @@
 package sel4;
 
-import io.github.bonigarcia.wdm.WebDriverManager;
 import org.openqa.selenium.*;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.support.ui.WebDriverWait;
@@ -16,7 +15,6 @@ public class GetRect {
 
     @BeforeMethod
     void Login() throws InterruptedException {
-        WebDriverManager.chromedriver().setup();
         driver = new ChromeDriver();
 
         driver.get("https://qavbox.github.io/demo/webtable/");

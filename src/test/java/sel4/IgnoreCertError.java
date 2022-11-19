@@ -1,11 +1,11 @@
 package sel4;
 
-import io.github.bonigarcia.wdm.WebDriverManager;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.devtools.DevTools;
 //import org.openqa.selenium.devtools.security.Security;
-import org.openqa.selenium.devtools.v102.security.Security;
+//import org.openqa.selenium.devtools.v102.security.Security;
+import org.openqa.selenium.devtools.v107.security.Security;
 import org.testng.annotations.Test;
 
 public class IgnoreCertError {
@@ -14,7 +14,6 @@ DevTools devTools;
 
     @Test
     public void Test_IgnoreSSLError() throws InterruptedException {
-        WebDriverManager.chromedriver().setup();
 
         driver = new ChromeDriver();
         devTools = ((ChromeDriver)driver).getDevTools();

@@ -1,20 +1,19 @@
 package sel4;
 
-import io.github.bonigarcia.wdm.WebDriverManager;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.devtools.DevTools;
 //import org.openqa.selenium.devtools.network.Network;
 //import org.openqa.selenium.devtools.network.model.ConnectionType;
-import org.openqa.selenium.devtools.v102.network.Network;
-import org.openqa.selenium.devtools.v102.network.model.ConnectionType;
+import org.openqa.selenium.devtools.v107.network.Network;
+import org.openqa.selenium.devtools.v107.network.model.ConnectionType;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 
 import java.util.Optional;
 
-import static org.openqa.selenium.devtools.v102.network.Network.loadingFailed;
+import static org.openqa.selenium.devtools.v107.network.Network.loadingFailed;
 
 //import static org.openqa.selenium.devtools.network.Network.loadingFailed;
 
@@ -25,7 +24,6 @@ public class emulateNetworkCond {
 
     @Test
     public void emulateNetworkConditionTest() throws InterruptedException {
-        WebDriverManager.chromedriver().setup();
         driver = new ChromeDriver();
         devTools =  ((ChromeDriver)driver).getDevTools();
 

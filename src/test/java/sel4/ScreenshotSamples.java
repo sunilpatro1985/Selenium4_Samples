@@ -1,6 +1,5 @@
 package sel4;
 
-import io.github.bonigarcia.wdm.WebDriverManager;
 import org.apache.commons.io.FileUtils;
 import org.openqa.selenium.*;
 import org.openqa.selenium.firefox.FirefoxDriver;
@@ -27,7 +26,6 @@ public class ScreenshotSamples {
         //WebDriverManager.chromedriver().setup();
         //driver = new ChromeDriver();
 
-        WebDriverManager.firefoxdriver().setup();
         driver = new FirefoxDriver();
 
         driver.get("https://www.saucedemo.com/");
