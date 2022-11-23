@@ -1,6 +1,6 @@
 package sel4;
 
-import io.github.bonigarcia.wdm.WebDriverManager;
+//import io.github.bonigarcia.wdm.WebDriverManager;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WindowType;
 import org.openqa.selenium.firefox.FirefoxDriver;
@@ -20,7 +20,7 @@ public class WindowTypeSamples {
         //WebDriverManager.chromedriver().setup();
         //driver = new ChromeDriver();
 
-        WebDriverManager.firefoxdriver().setup();
+        //WebDriverManager.firefoxdriver().setup();
         driver = new FirefoxDriver();
 
         driver.get("https://www.saucedemo.com/");

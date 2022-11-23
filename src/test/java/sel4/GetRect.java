@@ -1,11 +1,13 @@
 package sel4;
 
-import io.github.bonigarcia.wdm.WebDriverManager;
+//import io.github.bonigarcia.wdm.WebDriverManager;
 import org.openqa.selenium.*;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
+import org.openqa.selenium.manager.SeleniumManager;
 
 import java.time.Duration;
 
@@ -16,8 +18,9 @@ public class GetRect {
 
     @BeforeMethod
     void Login() throws InterruptedException {
-        WebDriverManager.chromedriver().setup();
+        //WebDriverManager.chromedriver().setup();
         driver = new ChromeDriver();
+        //driver = new FirefoxDriver();
 
         driver.get("https://qavbox.github.io/demo/webtable/");
         Thread.sleep(2000);
@@ -45,6 +48,7 @@ public class GetRect {
         System.out.println("Width - " + rect.width + "  " + rect.getWidth());
         System.out.println("height - " + rect.height + "  " + rect.getHeight());
 
+        System.out.println(SeleniumManager.getInstance().getDriverPath("chromedriver"));
 
         Thread.sleep(3000);
         driver.quit();

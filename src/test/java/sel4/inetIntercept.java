@@ -1,23 +1,23 @@
 package sel4;
 
 import com.google.common.collect.ImmutableList;
-import io.github.bonigarcia.wdm.WebDriverManager;
+//import io.github.bonigarcia.wdm.WebDriverManager;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.devtools.DevTools;
 //import org.openqa.selenium.devtools.network.Network;
 //import org.openqa.selenium.devtools.network.model.BlockedReason;
 //import org.openqa.selenium.devtools.network.model.ResourceType;
-import org.openqa.selenium.devtools.v102.network.Network;
-import org.openqa.selenium.devtools.v102.network.model.BlockedReason;
-import org.openqa.selenium.devtools.v102.network.model.ResourceType;
+import org.openqa.selenium.devtools.v107.network.Network;
+import org.openqa.selenium.devtools.v107.network.model.BlockedReason;
+import org.openqa.selenium.devtools.v107.network.model.ResourceType;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.annotations.Test;
 
 import java.util.Optional;
 
 //import static org.openqa.selenium.devtools.network.Network.loadingFailed;
-import static org.openqa.selenium.devtools.v102.network.Network.loadingFailed;
+import static org.openqa.selenium.devtools.v107.network.Network.loadingFailed;
 import static org.testng.Assert.assertEquals;
 
 public class inetIntercept {
@@ -28,7 +28,7 @@ public class inetIntercept {
     @Test
     public void networkIntercepting() throws InterruptedException {
         //https://chromedevtools.github.io/devtools-protocol/tot/Network/
-        WebDriverManager.chromedriver().setup();
+        //WebDriverManager.chromedriver().setup();
         driver = new ChromeDriver();
         devTools =  ((ChromeDriver)driver).getDevTools();
         devTools.createSession();
